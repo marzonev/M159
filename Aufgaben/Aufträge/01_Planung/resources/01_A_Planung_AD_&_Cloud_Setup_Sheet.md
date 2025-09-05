@@ -23,12 +23,12 @@ Diese Umgebung umfasst:
 
 ## 2. Allgemeine Angaben
 
-| Feld                                | Wert |
-| ----------------------------------- | ---- |
-| Vorname                             |      |
-| Nachname                            |      |
-| Klasse                              |      |
-| Dokumentation (GIT-Repository-Link) |      |
+| Feld                                | Wert                             |
+| ----------------------------------- | -------------------------------- |
+| Vorname                             | Nevio                            |
+| Nachname                            | Marzo                            |
+| Klasse                              | PE23e                            |
+| Dokumentation (GIT-Repository-Link) | https://github.com/marzonev/M159 |
 
 ---
 
@@ -49,13 +49,13 @@ Diese Umgebung umfasst:
 Alle Instanzen liegen in einem öffentlichen Subnetz und sind über RDP (Port 3389) von außen erreichbar.  
 Alle weiteren Ports sind nur innerhalb des VPCs offen.  
 
-| Komponente                    | VPC-ID | CIDR        | Name | Öffentlich/Privat |
-| ----------------------------- | ------ | ----------- | ---- | ----------------- |
-| VPC                           |        | 10.0.0.0/16 |      |                   |
-| Subnetz EC2 (DC/Client/Admin) |        |             |      | Öffentlich        |
-| Subnetz AWS AD                |        |             |      | Privat            |
-|                               |        |             |      | Privat            |
-|                               |        |             |      |                   |
+| Komponente                    | VPC-ID | CIDR         | Name | Öffentlich/Privat |
+| ----------------------------- | ------ | ------------ | ---- | ----------------- |
+| VPC                           |        | 10.30.0.0/16 |      |                   |
+| Subnetz EC2 (DC/Client/Admin) |        | 10.30.0.0/16 |      | Öffentlich        |
+| Subnetz AWS AD                |        |              |      | Privat            |
+|                               |        |              |      | Privat            |
+|                               |        |              |      |                   |
 
 ## 5. AWS Sicherheitsgruppen
 
@@ -127,12 +127,12 @@ Alle weiteren Ports sind nur innerhalb des VPCs offen.
 
 ## 7. EC2-Instanzen
 
-| Komponente                                       | FQDN | Elastic IP | Private IP (CIDR) | Subnetz | Öffentlich/Privat | Gateway | DNS-Server 1 | DNS-Server 2 | Lokaler Admin | Kennwort |
-| ------------------------------------------------ | ---- | ---------- | ----------------- | ------- | ----------------- | ------- | ------------ | ------------ | ------------- | -------- |
-| IaaS/OnPrem AD DC                                |      |            |                   |         | Öffentlich        |         |              |              |               |          |
-| Windows Server (Client)                          |      |            |                   |         | Öffentlich        |         |              |              |               |          |
-| Managed AWS EC2 DC                               |      |            |                   |         |                   |         |              |              |               |          |
-| Windows Server Admin Center (Managed AWS EC2 DC) |      |            |                   |         | Öffentlich        |         |              |              |               |          |
+| Komponente                                       | FQDN                 | Elastic IP   | Private IP (CIDR) | Subnetz      | Öffentlich/Privat | Gateway   | DNS-Server 1 | DNS-Server 2 | Lokaler Admin | Kennwort                         |
+| ------------------------------------------------ | -------------------- | ------------ | ----------------- | ------------ | ----------------- | --------- | ------------ | ------------ | ------------- | -------------------------------- |
+| IaaS/OnPrem AD DC                                | dcm159.ec2.platanera | 107.22.113.8 | 10.30.0.10/20     | 10.30.0.0/20 | Öffentlich        | 10.30.0.1 | 127.0.0.1    |              | Administrator | lt8v2TbtuO5i5=d=0Oihy1=xM3t?LxAT |
+| Windows Server (Client)                          | clm159.ec2.platanera | 3.93.132.83  | 10.30.0.20/20     | 10.30.0.0.22 | Öffentlich        | 10.30.0.1 | 10.30.0.10   |              | Adinistrator  | 4ZmBQ2rP0EqAZ0wP77j3F$x)uR!1RAjJ |
+| Managed AWS EC2 DC                               |                      |              |                   |              |                   |           |              |              |               |                                  |
+| Windows Server Admin Center (Managed AWS EC2 DC) |                      |              |                   |              | Öffentlich        |           |              |              |               |                                  |
 
 ---
 
@@ -140,12 +140,12 @@ Alle weiteren Ports sind nur innerhalb des VPCs offen.
 
 Definieren Sie je einen Benutzer dieser 3 Abteilungen 
 
-| Abteilung | Name der Abteilung | Benutzername | Vorname | Nachname | Kennwort | Bereiche |
-| --------- | ------------------ | ------------ | ------- | -------- | -------- | -------- |
-| 1         | Sekretariat        |              |         |          |          | intern   |
-| 2         | Buchhaltung        |              |         |          |          | intern   |
-| 3         | GL                 |              |         |          |          | intern   |
-| 4         | Promoter           |              |         |          |          | extern   |
+| Abteilung | Name der Abteilung | Benutzername | Vorname | Nachname | Kennwort  | Bereiche |
+| --------- | ------------------ | ------------ | ------- | -------- | --------- | -------- |
+| 1         | Sekretariat        | frarog       | Roger   | Franklin | Nevio1234 | intern   |
+| 2         | Buchhaltung        |              |         |          |           | intern   |
+| 3         | GL                 |              |         |          |           | intern   |
+| 4         | Promoter           |              |         |          |           | extern   |
 
 ## 09. Python-App-Registration (Entra-ID)
 
