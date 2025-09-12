@@ -92,12 +92,12 @@ Alle weiteren Ports sind nur innerhalb des VPCs offen.
 
 ### On-Premises Active Directory (AWS EC2)
 
-| Feld                                  | Wert |
-| ------------------------------------- | ---- |
-| Active Directory Third-Level-Domäne-1 |      |
-| Öffentlicher UPN-Suffix (später)      |      |
-| Domänenadministrator                  |      |
-| Kennwort Domänenadministrator         |      |
+| Feld                                  | Wert                             |
+| ------------------------------------- | -------------------------------- |
+| Active Directory Third-Level-Domäne-1 |                                  |
+| Öffentlicher UPN-Suffix (später)      |                                  |
+| Domänenadministrator                  | Administrator                    |
+| Kennwort Domänenadministrator         | lt8v2TbtuO5i5=d=0Oihy1=xM3t?LxAT |
 
 ### Azure AD (Entra ID)
 
@@ -143,9 +143,9 @@ Definieren Sie je einen Benutzer dieser 3 Abteilungen
 | Abteilung | Name der Abteilung | Benutzername | Vorname | Nachname | Kennwort  | Bereiche |
 | --------- | ------------------ | ------------ | ------- | -------- | --------- | -------- |
 | 1         | Sekretariat        | frarog       | Roger   | Franklin | Nevio1234 | intern   |
-| 2         | Buchhaltung        |              |         |          |           | intern   |
-| 3         | GL                 |              |         |          |           | intern   |
-| 4         | Promoter           |              |         |          |           | extern   |
+| 2         | Buchhaltung        | fraros       | Rosche  | Franco   | Nevio1234 | intern   |
+| 3         | GL                 | sybgur       | Gurt    | Sybau    | Nevio1234 | intern   |
+| 4         | Promoter           | friate       | Ate     | Fries    | Nevio1234 | extern   |
 
 ## 09. Python-App-Registration (Entra-ID)
 
