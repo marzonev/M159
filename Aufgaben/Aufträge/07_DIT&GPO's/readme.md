@@ -33,6 +33,10 @@ Richtlinien für den DIT:
 | •	Partner (extern)      | •	Informatik (intern)       |
 | •	Informatik (intern)   |                                |
 
+Hier ist mein DIT: [DIT-AD](resources/DIT-AD-Beispiel.drawio)
+
+![DIT-AD](resources/DIT-AD.png)
+
 
 ## Struktur im AD anlegen 
 
