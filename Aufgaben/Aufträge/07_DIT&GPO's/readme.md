@@ -107,6 +107,8 @@ Zur Vorbereitung lesen Sie bitte die relevanten Kapitel aus den bereitgestellten
    - Aktivieren Sie **"Im Sicherheitskontext des angemeldeten Benutzers ausführen"**.
 6. Exportieren Sie mit `gpresult /h gpo.html` eine HTML-Auswertung und speichern Sie diese in Teams.
 
+[gpo.html](resources/gpo.html)
+
 ---
 
 ## Teil 5: Farb- und SW-Drucker verteilen
@@ -127,6 +129,8 @@ Zur Vorbereitung lesen Sie bitte die relevanten Kapitel aus den bereitgestellten
 5. Verwenden Sie die Aktion **"Ersetzen"** oder **"Aktualisieren"**.
 
 6. Testen Sie die Verteilung, indem Sie die Drucker löschen und mit `gpupdate /force` neu hinzufügen lassen. Dokumentieren Sie dies per Video.
+
+<video controls src="resources/AddPrinters.mp4" title="Title"></video>
 
 ---
 
