@@ -79,7 +79,63 @@ C = Change
 - Erstellen Sie eine visualisierte Version der neuen Berechtigungsstruktur mit Rollengruppen & Berechtigungsgruppen basierend auf [AGDLP](https://www.youtube.com/watch?v=zHHzjjqVhTc&t=5s).
 - Rekonfigurieren Sie zwei Abteilungen Ihre Umgebung entsprechend der neuen Planung.
 
+```mermaid
+flowchart TB
+
+%% ===== GLOBAL GROUPS =====
+subgraph GLOBAL["🌐  Global Groups"]
+    G_BH["buchhaltung"]
+    G_SEK["sekretariat"]
+    G_PR["promoter"]
+    G_GL["gl"]
+end
+
+%% ===== DOMAIN LOCAL GROUPS =====
+subgraph LOCAL["👥  Domain Local Groups"]
+    DL_BH_R["DL_Buchhaltung_R"]
+    DL_BH_RW["DL_Buchhaltung_RW"]
+    DL_SEK_R["DL_Sekretariat_R"]
+    DL_SEK_RW["DL_Sekretariat_RW"]
+end
+
+%% ===== ORDNER / NTFS =====
+subgraph FOLDERS["📁  Ordner (NTFS-Berechtigungen)"]
+    F_BH["C:\\Daten\\Abteilungen\\Buchhaltung"]
+    F_SEK["C:\\Daten\\Abteilungen\\Sekretariat"]
+end
+
+%% ===== VERBINDUNGEN =====
+G_BH -- Mitglied --> DL_BH_RW
+G_SEK -- Mitglied --> DL_SEK_RW
+G_BH -- Lesen --> DL_SEK_R
+G_SEK -- Lesen --> DL_BH_R
+G_GL -- RWX --> DL_BH_RW & DL_SEK_RW
+G_PR -- Lesen --> DL_BH_R & DL_SEK_R
+DL_BH_R -- r --> F_BH
+DL_BH_RW -- rwx --> F_BH
+DL_SEK_R -- r --> F_SEK
+DL_SEK_RW -- rwx --> F_SEK
+
+%% ===== STYLES =====
+style GLOBAL fill:#F5F5F5,stroke:#90A4AE,stroke-width:2px
+style LOCAL fill:#F5F5F5,stroke:#90A4AE,stroke-width:2px
+style FOLDERS fill:#F5F5F5,stroke:#90A4AE,stroke-width:2px
+
+style G_BH fill:#FFCDD2
+style G_SEK fill:#BBDEFB
+style G_PR fill:#C8E6C9
+style G_GL fill:#FFF9C4
+
+linkStyle 0 stroke:#D50000,stroke-width:2px
+linkStyle 1 stroke:#2962FF,stroke-width:2px
+linkStyle 2 stroke:#D50000,stroke-width:2px
+linkStyle 3 stroke:#2962FF,stroke-width:2px
+linkStyle 4 stroke:#FFD600,stroke-width:2px
+linkStyle 5 stroke:#FFD600,stroke-width:2px
+linkStyle 6 stroke:#00C853,stroke-width:2px
+linkStyle 7 stroke:#00C853,stroke-width:2px
+
+```
 
 
-
-
+ 
