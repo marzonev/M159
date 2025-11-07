@@ -104,7 +104,7 @@ Alle weiteren Ports sind nur innerhalb des VPCs offen.
 | Entra AD Tenant Name         | Standardverzeichnis               |
 | Azure Administrator (UPN)    | Administrator@platanera.dynv6.net |
 | Kennwort Azure Administrator | Nevio1234                         |
-| Entra Connect Server (Name)  |                                   |
+| Entra Connect Server (Name)  | dcm159.ec2.platanera              |
 
 ### AWS Managed AD
 
@@ -127,7 +127,7 @@ Alle weiteren Ports sind nur innerhalb des VPCs offen.
 | ------------------------------------------------ | --------------------- | ------------ | ----------------- | ------------- | ----------------- | ---------- | ------------ | ------------ | ------------- | -------------------------------- |
 | IaaS/OnPrem AD DC                                | dcm159.ec2.platanera  | 107.22.113.8 | 10.30.0.10/20     | 10.30.0.0/20  | Öffentlich        | 10.30.0.1  | 127.0.0.1    |              | Administrator | lt8v2TbtuO5i5=d=0Oihy1=xM3t?LxAT |
 | Windows Server (Client)                          | clm159.ec2.platanera  | 3.93.132.83  | 10.30.0.20/20     | 10.30.0.0/20  | Öffentlich        | 10.30.0.1  | 10.30.0.10   |              | Adinistrator  | 4ZmBQ2rP0EqAZ0wP77j3F$x)uR!1RAjJ |
-| Managed AWS EC2 DC                               | aws.platanera         |              | 10.30.25.176      | 10.30.16.0/20 | Öffentlich        | 10.30.16.1 | 10.30.0.10   |              | Admin         | Nevio1234                        |
+| Managed AWS EC2 DC                               | aws.platanera         |              | 10.30.0.170       | 10.30.16.0/20 | Öffentlich        | 10.30.16.1 | 10.30.0.10   |              | Admin         | Nevio1234                        |
 | Windows Server Admin Center (Managed AWS EC2 DC) | dasm159.aws.platanera | 3.213.209.15 | 10.30.16.20       | 10.30.16.0/20 | Öffentlich        | 10.30.16.1 | 10.30.0.10   |              | Administrator | !@*DwM9ceEGwz-aW?((lDTjgS?&sB(IO |
 
 ---
